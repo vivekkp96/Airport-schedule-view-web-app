@@ -1,0 +1,17 @@
+
+<div class="row mt-5">
+    <div class="col-md-6 m-auto">
+      <div class="card card-body">
+            <h1 CLASS="text-center"><%= name %></h1>
+            <form action = "/selectdate/<%= terminalid %>" class="needs-validation" method="POST" novalidate>
+                <div class="form-group">
+                    <label for="date">Enter the date</label>
+                    <input type="date" name="date" id="date" class="form-control" value="" required />
+                    <div class="invalid-feedback">Please select a valid date.</div>               
+                    <br>
+                    <button type="submit"  class='btn btn-primary btn-block btn-info'>Get details</button>
+                </div>
+            </form>
+        </div>   
+    </div>
+</div>

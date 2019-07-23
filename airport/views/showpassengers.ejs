@@ -1,0 +1,45 @@
+<div class="row mt-5">
+        <div class="col-md-6 m-auto">
+          <div class="card card-body">
+            <form action="/plain/savepas/<%= plainid %>"  class="needs-validation" method="POST" novalidate>
+                <div class="form-group">
+                    <input type="name" name="name" class="form-control" placeholder="Enter name of passenger" required />
+                    <br>
+                    <input type="name" name="arrive" class="form-control" placeholder="Arrive" required />
+                    <div class="invalid-feedback">Please fill all fields correctly</div>   
+                </div>
+                <button type="submit" class="btn btn-primary btn-block">Add</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<div class="row mt-5">
+        <div class="col-md-6 m-auto">
+          <div class="card card-body text-center"> 
+              <table class="table">
+                <%
+                var len = Object.keys(rows).length;
+                if( len !== 0 ){ %>
+                    <thead class="thead-light">
+                            <tr>
+                                <th scope="col">#</th>
+                                <th scope="col">name</th>
+                                <th scope="col">arrive</th>
+                            </tr>
+                        </thead>       
+                    <tbody>
+                    <% for( var i=0; i < len; i++ ){ %>
+                        <tr>
+                            <th scope="row"><%= i+1 %></th>
+                            <td><%= rows[i].name %></td>
+                            <td><%= rows[i].arrive %></td>
+                        </tr>
+                 <% } }else{    %>
+                    <p>No passengers details found</p>
+                       <% } %>
+                </tbody>
+                </table>
+            </div>
+         </div>
+      </div>

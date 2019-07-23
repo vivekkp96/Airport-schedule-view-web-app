@@ -1,0 +1,35 @@
+<div class="row mt-5">
+    <div class="col-md-6 m-auto">
+      <div class="card card-body text-center"> 
+          <table class="table">
+                     
+              
+            <%
+            var len = Object.keys(rows).length;
+            if( len !== 0 ){ %>
+                <thead class="thead-light">
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">name</th>
+                            <th scope="col">arrive</th>
+                            <th scope="col">depart</th>
+                        </tr>
+                    </thead>
+                <% for( var i=0; i < len; i++ ){ %>      
+                    <tbody>
+                    <tr>
+                        <form action="/plain/passengers/<%= rows[i].id %>" method="POST">
+                            <th scope="row"><%= i+1 %></th>
+                            <td><button type="submit" class="btn"><%= rows[i].name %></button></td>
+                            <td><%= rows[i].arrive %></td>
+                            <td><%= rows[i].depart %></td>
+                        </form>
+                    </tr>
+             <% } }else{%>
+                <p>No plain details found</p>
+         <% } %>
+            </tbody>
+            </table>
+        </div>
+     </div>
+  </div>

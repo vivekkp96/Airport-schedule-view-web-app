@@ -1,0 +1,12 @@
+<div class="row mt-5">
+  <div class="col-md-6 m-auto">
+    <div class="card card-body">
+      <form action="/plain/addplain/<%= date %>/<%= terminalid %>" method="POST">
+        <button type="submit" class='btn btn-primary btn-block'>Add</button>
+      </form> <br>           
+      <form action="/plain/plaindetails/<%= date %>/<%= terminalid %>" method="POST">
+        <button type="submit" class='btn btn-primary btn-block'>View</button>
+      </form>             
+    </div>
+  </div>
+</div>

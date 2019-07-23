@@ -1,0 +1,12 @@
+tId,tName,airportid,dId,date,plId,plName,plArrive,plDepart,pId,pName,pArrive
+8,terminal2,1,16,2019-07-01,21,Indigo,1, 1:30,4,Azim,Dubai
+8,terminal2,1,16,2019-07-01,21,Indigo,1, 1:30,5,Asin,Dubai
+8,terminal2,1,16,2019-07-01,22,Emiates,2, 2:30,6,Manuel,Dubai
+8,terminal2,1,16,2019-07-01,23,Etihad Airways,3, 3:30,7,Sam,USA
+8,terminal2,1,16,2019-07-01,24,Etihad Airways,4, 4:30,8,John,Austria
+7,terminal1,1,11,2019-07-01,12,space jet,10,11,,,
+7,terminal1,1,12,2019-07-02,13,space jet,10,11,,,
+7,terminal1,1,13,2019-07-03,14,space jet,10,11,,,
+7,terminal1,1,14,2019-07-04,15,space jet,10,11,,,
+7,terminal1,1,15,2019-07-05,16,space jet,10,11,,,
+7,terminal1,1,11,2019-07-01,19,Air India,15,16,,,

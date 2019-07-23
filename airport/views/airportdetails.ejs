@@ -1,0 +1,13 @@
+<div class="row mt-5">
+  <div class="col-md-6 m-auto">
+    <div class="card card-body text-center">        
+      <h1><%= name %></h1><br>
+      <form action = '/editairport/<%= name %>' method = 'POST'>
+        <button type = 'submit'  class='btn btn-primary btn-block' >edit airport details</button>
+      </form><br>
+      <form action = '/terminal' method = 'POST'>
+        <button type = 'submit'  class='btn btn-primary btn-block btn-info' >terminals</button>
+      </form> 
+    </div>
+  </div>
+</div>

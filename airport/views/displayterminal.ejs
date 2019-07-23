@@ -1,0 +1,52 @@
+<div class="row mt-5">
+  <div class="col-md-6 m-auto">
+    <div class="card card-body">
+      <form action='/addterminal' class="needs-validation" method="POST" novalidate >
+        <div class='form-group'>
+          <label for="name">Name</label>
+          <input
+            type="name"
+            id='name' 
+            name='name'
+            class="form-control" 
+            placeholder='Terminal name' 
+            required
+          />
+          <div class="invalid-feedback">Please Enter a valid Name.</div>   
+        </div>
+        <button type='submit' class='btn btn-primary btn-block'>Add</button>
+      </form>            
+    </div>
+  </div>
+</div>
+
+
+
+  <div class="row mt-5">
+    <div class="col-md-6 m-auto">
+      <div class="card card-body">
+        <% if (result == '') { %>
+          <span>No terminal details found.</span>
+        <%}else{%>
+        <table>
+          <thead>
+            <a href="csv/terminalcsv" target="_blank" title="Download csv files contain details of terminal">
+              <i class="fa fa-download fa-1x" style="color:green" aria-hidden="true">
+              </i>
+            </a>
+          </thead>
+          <% for( var i=0; i < Object.keys(result).length; i++ ) { %>
+            <tr>
+              <td>
+                <form action="/selectterminal/<%= result[i].name %>/<%= result[i].id %>" method="POST">
+                  <button type="submit" class="btn btn-pimary btn-block"><%= result[i].name %>
+                  </button>            
+                </form>
+              </td>
+            </tr>
+          <% } %>
+        </table>                                       
+        <% } %>
+      </div>
+    </div>
+  </div>
